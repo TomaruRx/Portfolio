@@ -11,8 +11,8 @@
 
     <header id="header" class="row" role="banner">
         <div class="headers">
-            <h1>Portfolio</h1>
-            <h2>Tomaru</h2>
+            <h1>Tomaru</h1>
+            <h2>Portfolio</h2>
             <h3>高専2年</h3>
         </div> 
         <div class="hamburger-list">
@@ -30,6 +30,23 @@
 
     <main class="container">
         <!-- Projects Section -->
+        <section id="about-me" class="card">
+            <h2>Experience</h2>
+            <div class="about-tree">
+                <div class="tree-item root">
+                    <div class="tree-node">Tomaru</div>
+                    <ul class="tree-children">
+                        <li class="tree-item">
+                            <div class="tree-date">2024.4</div>
+                            <div class="tree-node">大阪公立大学工業高等専門学校に入学</div>
+                            <div class="tree-date">2025.4</div>
+                            <div class="tree-node">知能情報コースに進級</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
         <section id="projects" class="card">
             <h2>Project</h2>
             <div class="projects-grid">
@@ -99,36 +116,74 @@
                 </div>
             </div>
         </section>
-
-        <!-- About Me Tree Section -->
-        <section id="about-me" class="card">
-            <h2>About Me</h2>
-            <div class="about-tree">
-                <div class="tree-item root">
-                    <div class="tree-node">Tomaru</div>
-                    <ul class="tree-children">
-                        <li class="tree-item">
-                            <div class="tree-node">Tree</div>
-                            <ul class="tree-children">
-                                <li class="tree-item"><div class="tree-node">高専 国際流通科</div></li>
-                                <li class="tree-item"><div class="tree-node">2年生</div></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
     </main>
 
     <footer>
         <div class="social-links">
-            <a href="mailto:your-email@example.com" class="social-icon" title="Email">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Email" />
-            </a>
-            <a href="https://github.com/TomaruRx" class="social-icon" title="GitHub">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" />
-            </a>
+            <div class="social-item">
+                <div class="social-label">学校用メール</div>
+                <a href="mailto:ri24056e@st.omu.ac.jp" class="social-icon" title="Email" data-email="ri24056e@st.omu.ac.jp">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Email" />
+                </a>
+            </div>
+            <div class="social-item">
+                <div class="social-label">GitHub</div>
+                <a href="https://github.com/TomaruRx" class="social-icon" title="GitHub">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" />
+                </a>
+            </div>
         </div>
+
+        <script>
+        (function(){
+            function flash(elem, text){
+                if(elem && elem.tagName && elem.tagName.toLowerCase() === 'button'){
+                    var orig = elem.textContent;
+                    elem.textContent = text;
+                    elem.classList.add('copied');
+                    setTimeout(function(){ elem.textContent = orig; elem.classList.remove('copied'); }, 1800);
+                    return;
+                }
+                var tip = document.createElement('span');
+                tip.className = 'copy-tip';
+                tip.textContent = text;
+                var rect = { left: window.innerWidth/2, top: window.innerHeight/2, width:0 };
+                try{ var r = elem.getBoundingClientRect(); rect = r; }catch(e){}
+                tip.style.left = (rect.left + (rect.width||0)/2) + 'px';
+                tip.style.top = (rect.top - 8) + 'px';
+                document.body.appendChild(tip);
+                void tip.offsetWidth;
+                tip.classList.add('show');
+                setTimeout(function(){ tip.classList.remove('show'); setTimeout(function(){ if(tip.parentNode) tip.parentNode.removeChild(tip); }, 220); }, 1400);
+            }
+
+            function doCopy(email, targetElem){
+                if(navigator.clipboard && navigator.clipboard.writeText){
+                    navigator.clipboard.writeText(email).then(function(){ flash(targetElem, 'コピーしました'); }, function(){ flash(targetElem, 'コピー失敗'); });
+                } else {
+                    var ta = document.createElement('textarea');
+                    ta.value = email; ta.style.position = 'fixed'; ta.style.opacity = '0';
+                    document.body.appendChild(ta); ta.focus(); ta.select();
+                    try{ document.execCommand('copy'); flash(targetElem, 'コピーしました'); }catch(err){ flash(targetElem,'コピー失敗'); }
+                    document.body.removeChild(ta);
+                }
+            }
+
+            document.addEventListener('click', function(e){
+                var btn = e.target.closest('.copy-btn');
+                if(btn){
+                    var email = btn.getAttribute('data-email'); if(email) doCopy(email, btn);
+                    return;
+                }
+
+                var icon = e.target.closest('.social-icon[data-email]');
+                if(icon){
+                    e.preventDefault();
+                    var email = icon.getAttribute('data-email'); if(email) doCopy(email, icon);
+                }
+            });
+        })();
+        </script>
         <p>&copy; 2025 Tomaru Portfolio. All rights reserved.</p>
     </footer>
 

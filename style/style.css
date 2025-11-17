@@ -55,9 +55,18 @@ body::before {
   z-index: 1;
 }
 
+#header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(10, 10, 15, 0.95);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 12px rgba(0, 255, 252, 0.15);
+}
+
 .headers {
-  margin: 20px;
-  padding: 20px;
+  margin: 8px 20px;
+  padding: 8px 20px;
   border-radius: 2px;
   background: rgba(16, 16, 32, 0.7);
   border: 1px solid #00fffc;
@@ -65,6 +74,30 @@ body::before {
   backdrop-filter: blur(5px);
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.headers h1 {
+  font-size: 2rem;
+  margin: 2px 0;
+  color: #00fffc;
+  text-shadow: 0 0 8px rgba(0, 255, 252, 0.5);
+}
+
+.headers h2 {
+  font-size: 1.2rem;
+  margin: 2px 0;
+  color: #fc00ff;
+  text-shadow: 0 0 6px rgba(252, 0, 255, 0.4);
+}
+
+.headers h3 {
+  font-size: 0.85rem;
+  margin: 2px 0;
+  color: #ffffff;
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.3);
 }
 
 .headers::before {
@@ -428,6 +461,15 @@ h1::after, h2::after {
   color: #00fffc;
 }
 
+.tree-date {
+  display: block;
+  font-size: 0.8rem;
+  color: #00fffc;
+  font-weight: 600;
+  margin-bottom: 4px;
+  text-shadow: 0 0 6px rgba(0, 255, 252, 0.3);
+}
+
 .tree-node {
   display: inline-block;
   padding: 6px 12px;
@@ -556,3 +598,60 @@ footer {
   height: 24px;
   filter: invert(1) brightness(1.2);
 }
+
+/* social item wrapper and label */
+.social-item{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:6px;
+}
+
+.social-label{
+  color: #00fffc;
+  font-size: 0.75rem;
+  margin-bottom: 4px;
+}
+
+/* Copy button for email */
+.copy-btn{
+  margin-top: 6px;
+  padding: 6px 10px;
+  font-size: 0.75rem;
+  color: #0a0a0f;
+  /* background: #ffcc00; */
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+.copy-btn:hover{ transform: translateY(-2px); }
+.copy-btn.copied{
+  background: #9be23a;
+  color: #06210a;
+}
+
+/* copy tip (cyberpunk style) */
+.copy-tip{
+  position: fixed;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #00fffc;
+  background: linear-gradient(90deg, rgba(0,0,0,0.9), rgba(8,6,18,0.85));
+  box-shadow: 0 0 18px rgba(0,255,252,0.35), 0 0 36px rgba(252,0,255,0.12) inset;
+  border: 1px solid rgba(0,255,252,0.6);
+  transform: translate(-50%, -120%);
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.18s ease, transform 0.22s ease;
+}
+.copy-tip.show{
+  opacity: 1;
+  transform: translate(-50%, -140%);
+}
+
+
