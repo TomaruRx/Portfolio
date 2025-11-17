@@ -8,7 +8,6 @@
     <title>Home</title>
 </head>
 <body>
-
     <header id="header" class="row" role="banner">
         <div class="headers">
             <h1>Tomaru</h1>
@@ -21,7 +20,15 @@
             <div class="list-content">
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="contents/hobby.html">Hobby</a></li>
+                    <li class="menu-item-with-submenu">
+                        <a href="contents/hobby.html" class="menu-toggle">Hobby</a>
+                        <ul class="submenu">
+                            <li><a href="contents/art.html">art</a></li>
+                        </ul>
+                        <ul class="submenu">
+                            <li><a href="contents/math.html">math</a></li>
+                        </ul>
+                    </li>
                     <!-- <li><a href="contents/contact.html">Contact</a></li> -->
                 </ul>
             </div>
@@ -182,6 +189,16 @@
                 if(icon){
                     e.preventDefault();
                     var email = icon.getAttribute('data-email'); if(email) doCopy(email, icon);
+                }
+
+                // Submenu toggle
+                var menuToggle = e.target.closest('.menu-toggle');
+                if(menuToggle){
+                    e.preventDefault();
+                    var menuItem = menuToggle.closest('.menu-item-with-submenu');
+                    if(menuItem){
+                        menuItem.classList.toggle('open');
+                    }
                 }
             });
         })();
