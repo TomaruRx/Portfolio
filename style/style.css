@@ -524,3 +524,35 @@ footer {
   font-size: 0.85rem;
   border-top: 1px solid #fc00ff;
 }
+
+.social-links {
+  margin: 12px 0;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(252, 0, 255, 0.1);
+  border: 1px solid #fc00ff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  background: rgba(252, 0, 255, 0.3);
+  box-shadow: 0 0 15px rgba(252, 0, 255, 0.5);
+  transform: scale(1.15);
+}
+
+.social-icon img {
+  width: 24px;
+  height: 24px;
+  filter: invert(1) brightness(1.2);
+}
