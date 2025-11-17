@@ -10,7 +10,9 @@
 <body>
     <header id="header" class="row" role="banner">
         <div class="headers">
-            <h1>Hobby</h1>
+            <h1>Tomaru</h1>
+            <h2>Portfolio-Hobby</h2>
+            <h3>高専2年</h3>
         </div> 
         <div class="hamburger-list">
             <input type="checkbox" id="list-btn-check">
@@ -24,5 +26,118 @@
             </div>
         </div>
     </header>
+    <main class="container">
+        <section id="projects" class="card">
+            <h2>Project</h2>
+            <div class="projects-grid">
+                <article class="project-item">
+                    <h3>2024年高専祭掲示作品</h3>
+                    <p>展示場所：高専祭(Instagram),合同展示会(コミュニケーション談話室1)</p>
+                    <div class="project-media" oncontextmenu="return false;">
+                        <div class="hobby-image">
+                            <img src="hobby_work/2024.jpg" alt="高専祭掲示作品 2024" draggable="false" />
+                        </div>
+                        <!-- <div class="watermark watermark-center">無断転載・無断使用・無断保存禁止</div> -->
+                    </div>
+                    <div class="disclaimer">当サイトに掲載されている画像・作品の無断転載・無断使用・無断保存を固く禁じます。使用や転載のご希望は事前にお問い合わせください。</div>
+                    <a class="insta-btn" href="https://www.instagram.com/art_omuct/p/DCIaOZjyyNR/" target="_blank" rel="noopener" aria-label="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="#fc00ff" stroke-width="1.4" fill="none" />
+                            <path d="M7 7h10v10H7z" fill="#fff" opacity="0.02" />
+                            <path d="M12 8.3a3.7 3.7 0 1 0 0 7.4 3.7 3.7 0 0 0 0-7.4z" stroke="#fc00ff" stroke-width="1.4" fill="none" />
+                            <circle cx="17.2" cy="6.7" r="0.85" fill="#fc00ff" />
+                        </svg>
+                    </a>
+                    <div class="gear gear--small"></div>
+                </article>
+                <article class="project-item">
+                    <h3>2025年高専祭掲示作品</h3>
+                    <p>ここにプロジェクトの説明を書きます。</p>
+                    <div class="project-media" oncontextmenu="return false;">
+                        <div class="hobby-image">
+                            <img src="hobby_work/2025.jpg" alt="高専祭掲示作品 2025" draggable="false" />
+                        </div>
+                        <!-- <div class="watermark watermark-center">無断転載・無断使用・無断保存禁止</div> -->
+                    </div>
+                    <div class="disclaimer">当サイトに掲載されている画像・作品の無断転載・無断使用・無断保存を固く禁じます。使用や転載のご希望は事前にお問い合わせください。</div>
+                    <a class="insta-btn" href="https://www.instagram.com/art_omuct/p/DQwrsFPkuk1/" target="_blank" rel="noopener" aria-label="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="#fc00ff" stroke-width="1.4" fill="none" />
+                            <path d="M7 7h10v10H7z" fill="#fff" opacity="0.02" />
+                            <path d="M12 8.3a3.7 3.7 0 1 0 0 7.4 3.7 3.7 0 0 0 0-7.4z" stroke="#fc00ff" stroke-width="1.4" fill="none" />
+                            <circle cx="17.2" cy="6.7" r="0.85" fill="#fc00ff" />
+                        </svg>
+                    </a>
+                    <div class="gear gear--small"></div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <div class="social-item">
+                <div class="social-label">学校用メール</div>
+                <a href="mailto:ri24056e@st.omu.ac.jp" class="social-icon" title="Email" data-email="ri24056e@st.omu.ac.jp">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Email" />
+                </a>
+            </div>
+            <div class="social-item">
+                <div class="social-label">GitHub</div>
+                <a href="https://github.com/TomaruRx" class="social-icon" title="GitHub">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" />
+                </a>
+            </div>
+        </div>
+
+        <script>
+        (function(){
+            function flash(elem, text){
+                if(elem && elem.tagName && elem.tagName.toLowerCase() === 'button'){
+                    var orig = elem.textContent;
+                    elem.textContent = text;
+                    elem.classList.add('copied');
+                    setTimeout(function(){ elem.textContent = orig; elem.classList.remove('copied'); }, 1800);
+                    return;
+                }
+                var tip = document.createElement('span');
+                tip.className = 'copy-tip';
+                tip.textContent = text;
+                var rect = { left: window.innerWidth/2, top: window.innerHeight/2, width:0 };
+                try{ var r = elem.getBoundingClientRect(); rect = r; }catch(e){}
+                tip.style.left = (rect.left + (rect.width||0)/2) + 'px';
+                tip.style.top = (rect.top - 8) + 'px';
+                document.body.appendChild(tip);
+                void tip.offsetWidth;
+                tip.classList.add('show');
+                setTimeout(function(){ tip.classList.remove('show'); setTimeout(function(){ if(tip.parentNode) tip.parentNode.removeChild(tip); }, 220); }, 1400);
+            }
+
+            function doCopy(email, targetElem){
+                if(navigator.clipboard && navigator.clipboard.writeText){
+                    navigator.clipboard.writeText(email).then(function(){ flash(targetElem, 'コピーしました'); }, function(){ flash(targetElem, 'コピー失敗'); });
+                } else {
+                    var ta = document.createElement('textarea');
+                    ta.value = email; ta.style.position = 'fixed'; ta.style.opacity = '0';
+                    document.body.appendChild(ta); ta.focus(); ta.select();
+                    try{ document.execCommand('copy'); flash(targetElem, 'コピーしました'); }catch(err){ flash(targetElem,'コピー失敗'); }
+                    document.body.removeChild(ta);
+                }
+            }
+
+            document.addEventListener('click', function(e){
+                var btn = e.target.closest('.copy-btn');
+                if(btn){
+                    var email = btn.getAttribute('data-email'); if(email) doCopy(email, btn);
+                    return;
+                }
+
+                var icon = e.target.closest('.social-icon[data-email]');
+                if(icon){ e.preventDefault(); var email = icon.getAttribute('data-email'); if(email) doCopy(email, icon); }
+            });
+        })();
+        </script>
+        <p>&copy; 2025 Tomaru Portfolio. All rights reserved.</p>
+    </footer>
 </body>
 </html>
