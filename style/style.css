@@ -127,6 +127,7 @@ body::before {
   box-shadow: 0 0 10px rgba(252, 0, 255, 0.3);
   backdrop-filter: blur(5px);
   transition: all 0.3s ease;
+  pointer-events: auto;
 }
 
 .list-btn span {
@@ -206,7 +207,7 @@ body::before {
 }
 
 .list-content ul {
-  padding: 70px 10px 0;
+  padding: 0 10px 0;
 }
 
 .list-content ul li {
@@ -230,6 +231,8 @@ body::before {
   padding: 12px 15px;
   position: relative;
   transition: all 0.3s ease;
+  background: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(252, 0, 255, 0.15) 10px, rgba(252, 0, 255, 0.15) 20px);
+  pointer-events: auto;
 }
 
 .list-content ul li a:hover {
@@ -246,7 +249,7 @@ body::before {
   border-right: solid 2px #ffffff;
   transform: rotate(45deg);
   position: absolute;
-  right: 11px;
+  right: 70px;
   top: 16px;
 }
 
@@ -528,6 +531,108 @@ h1::after, h2::after {
     conic-gradient(#fc00ff 0deg 30deg, rgba(0, 0, 0, 0.1) 30deg 60deg, #fc00ff 60deg 90deg, rgba(0, 0, 0, 0.15) 90deg 120deg, #fc00ff 120deg 150deg, rgba(0, 0, 0, 0.1) 150deg 180deg, #fc00ff 180deg 210deg, rgba(0, 0, 0, 0.12) 210deg 240deg, #fc00ff 240deg 270deg, rgba(0, 0, 0, 0.08) 270deg 300deg, #fc00ff 300deg 330deg, rgba(0, 0, 0, 0.08) 330deg 360deg);
   box-shadow: 0 0 15px rgba(252, 0, 255, 0.4), inset 0 4px 8px rgba(255, 255, 255, 0.08);
 }
+
+/* Hobby page image styling */
+.hobby-image {
+  margin: 12px 0 8px;
+  text-align: center;
+}
+.hobby-image img{
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+  width: min(520px, 92%);
+  border-radius: 6px;
+  border: 2px solid #fc00ff;
+  box-shadow: 0 8px 24px rgba(252,0,255,0.12), 0 2px 6px rgba(0,0,0,0.5) inset;
+}
+
+/* discourage saving: project media wrapper + center watermark */
+.project-media{
+  position: relative;
+  display: inline-block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.project-media img{ -webkit-user-drag: none; }
+
+.watermark{
+  position: absolute;
+  pointer-events: none;
+  font-weight: 800;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  text-align: center;
+  text-transform: none;
+}
+
+/* center horizontal bar watermark */
+.watermark-center{
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  background: rgba(255,255,255,0.3);
+  color: #0a0a0a;
+  padding: 8px 24px;
+  font-size: 1rem;
+  line-height: 1.2;
+  border-radius: 4px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+  max-width: 90%;
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+/* stronger overlay variant: repeated faint stripes across image (optional) */
+.project-media::before{
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(135deg, rgba(252,0,255,0.02) 0 8px, transparent 8px 16px);
+  pointer-events: none;
+}
+
+@media (max-width:640px){
+  .watermark-center{ padding: 6px 12px; font-size:0.9rem; }
+}
+
+/* Disclaimer for images / works */
+.disclaimer{
+  font-size: 0.82rem;
+  color: #e0c6ff;
+  margin-top: 8px;
+  opacity: 0.95;
+  text-align: center;
+  padding: 8px 12px;
+  border-top: 1px solid rgba(252,0,255,0.08);
+}
+.footer-disclaimer{
+  font-size: 0.78rem;
+  color: #f3e6ff;
+  opacity: 0.9;
+  margin: 12px 0 6px;
+}
+
+/* Instagram button under each work */
+.insta-btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  float: right;
+  margin: 8px 0 6px 12px;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background: rgba(255,255,255,0.98);
+  border: 2px solid #fc00ff;
+  border-radius: 50%;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.28);
+  text-decoration: none;
+}
+.insta-btn svg{ display:block; }
+.insta-btn:hover{ transform: translateY(-3px); box-shadow: 0 10px 26px rgba(0,0,0,0.36); }
 
 .gear::after {
   content: '';
