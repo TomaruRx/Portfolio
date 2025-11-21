@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/style.css">
     <link rel="icon" href="../style/favicon.ico">
-    <title>Hobby</title>
+    <title>Tomaru | Art</title>
 </head>
 <body>
     <header id="header" class="row" role="banner">
         <div class="headers">
-            <h1>Tomaru</h1>
-            <h2>Portfolio-Hobby.ART</h2>
+            <h1>Tomaru's Portfolio > ART</h1>
+            <!-- <h2>Portfolio-Hobby.ART</h2> -->
             <h3>高専2年</h3>
         </div> 
         <div class="hamburger-list">
@@ -21,7 +21,7 @@
                 <ul>
                     <li><a href="../index.html">Home</a></li>
                     <li class="menu-item-with-submenu">
-                        <a href="hobby.html" class="menu-toggle">Hobby</a>
+                        <a class="menu-toggle">Hobby</a>
                         <ul class="submenu">
                             <li><a href="art.html">art</a></li>
                         </ul>
@@ -48,7 +48,7 @@
                             <img src="image/work1.jpg" alt="校内展示" draggable="false" />
                         </div>
                     </div>
-                    <div class="disclaimer">当サイトに掲載されている画像・作品の無断転載・無断使用・無断保存を固く禁じます。</div>
+                    <!-- <div class="disclaimer">当サイトに掲載されている画像・作品の無断転載・無断使用・無断保存を固く禁じます。</div> -->
                     <div class="bottom-section">
                         <div class="gear gear--small"></div>
                         <button class="toggle-image-btn" type="button" title="画像を切り替え">🔄</button>
@@ -64,7 +64,7 @@
                             <img src="image/work2.jpg" alt="高専祭掲示作品 2024" draggable="false" />
                         </div>
                     </div>
-                    <div class="disclaimer">当サイトに掲載されている画像・作品の無断転載・無断使用・無断保存を固く禁じます。</div>
+                    <!-- <div class="disclaimer">当サイトに掲載されている画像・作品の無断転載・無断使用・無断保存を固く禁じます。</div> -->
                     <div class="bottom-section">
                         <div class="gear gear--small"></div>
                         <a class="insta-btn" href="https://www.instagram.com/art_omuct/p/DCIaOZjyyNR/" target="_blank" rel="noopener" aria-label="Instagram">
@@ -88,7 +88,7 @@
                         </div>
                         <!-- <div class="watermark watermark-center">無断転載・無断使用・無断保存禁止</div> -->
                     </div>
-                    <div class="disclaimer">当サイトに掲載されている画像・作品の無断転載・無断使用・無断保存を固く禁じます。使用や転載のご希望は事前にお問い合わせください。</div>
+                    <!-- <div class="disclaimer">当サイトに掲載されている画像・作品の無断転載・無断使用・無断保存を固く禁じます。</div> -->
                     <div class="bottom-section">
                         <div class="gear gear--small"></div>
                         <a class="insta-btn" href="https://www.instagram.com/art_omuct/p/DQwrsFPkuk1/" target="_blank" rel="noopener" aria-label="Instagram">
@@ -165,6 +165,16 @@
 
                 var icon = e.target.closest('.social-icon[data-email]');
                 if(icon){ e.preventDefault(); var email = icon.getAttribute('data-email'); if(email) doCopy(email, icon); }
+
+                // Submenu toggle handler
+                var menuToggle = e.target.closest('.menu-toggle');
+                if(menuToggle){
+                    e.preventDefault();
+                    var menuItem = menuToggle.closest('.menu-item-with-submenu');
+                    if(menuItem){
+                        menuItem.classList.toggle('open');
+                    }
+                }
 
                 // Image toggle button handler
                 var toggleBtn = e.target.closest('.toggle-image-btn');
