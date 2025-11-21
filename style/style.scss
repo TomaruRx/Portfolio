@@ -834,75 +834,68 @@ h1::after, h2::after {
 /* About Me Tree */
 .about-tree {
   margin-top: 20px;
-  padding: 16px;
-  background: rgba(16, 16, 32, 0.6);
-  border-left: 3px solid #fc00ff;
-  border-radius: 4px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
 }
 
 .tree-item {
   margin: 0;
   padding: 0;
-}
-
-.tree-item.root .tree-node {
-  font-size: 1.1rem;
-  font-weight: bold;
-  color: #00fffc;
+  list-style: none;
 }
 
 .tree-date {
   display: block;
-  font-size: 0.8rem;
+  font-size: 0.95rem;
   color: #00fffc;
   font-weight: 600;
-  margin-bottom: 4px;
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
   text-shadow: 0 0 6px rgba(0, 255, 252, 0.3);
 }
 
+.tree-children {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.tree-children > li {
+  position: relative;
+  padding: 18px 20px;
+  background: rgba(16, 16, 32, 0.78);
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45),
+    0 0 30px rgba(0, 255, 252, 0.12);
+}
+
+.tree-node-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .tree-node {
-  display: inline-block;
-  padding: 6px 12px;
-  margin: 4px 0;
-  background: rgba(252, 0, 255, 0.1);
-  border: 1px solid #fc00ff;
-  border-radius: 3px;
+  display: block;
+  padding: 10px 14px;
+  margin: 0;
+  background: rgba(252, 0, 255, 0.12);
+  border-radius: 6px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05);
   color: #e0e0ff;
-  font-size: 0.95rem;
+  font-size: 0.97rem;
   transition: all 0.2s ease;
 }
 
 .tree-node:hover {
-  background: rgba(252, 0, 255, 0.2);
+  background: rgba(252, 0, 255, 0.22);
   color: #00fffc;
-  text-shadow: 0 0 8px rgba(0, 255, 252, 0.4);
-}
-
-.tree-children {
-  margin: 12px 0 12px 20px;
-  padding: 0;
-  border-left: 2px dashed #fc00ff;
-  list-style: none;
-}
-
-.tree-item {
-  position: relative;
-  margin-left: 0;
-  margin-bottom: 8px;
-}
-
-.tree-item .tree-children {
-  margin-left: 30px;
-}
-
-.tree-children > li::before {
-  content: '';
-  position: absolute;
-  left: -18px;
-  top: 16px;
-  width: 14px;
-  height: 2px;
-  background-color: #fc00ff;
+  text-shadow: 0 0 12px rgba(0, 255, 252, 0.45);
 }
 
 /* Gear element (Pure CSS) */
