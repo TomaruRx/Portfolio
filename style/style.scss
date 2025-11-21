@@ -1134,6 +1134,7 @@ footer {
 }
 
 .social-icon {
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1193,24 +1194,28 @@ footer {
 
 /* copy tip (cyberpunk style) */
 .copy-tip{
-  position: fixed;
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 10px);
   padding: 8px 12px;
   border-radius: 6px;
   font-weight: 700;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: #00fffc;
   background: linear-gradient(90deg, rgba(0,0,0,0.9), rgba(8,6,18,0.85));
   box-shadow: 0 0 18px rgba(0,255,252,0.35), 0 0 36px rgba(252,0,255,0.12) inset;
   border: 1px solid rgba(0,255,252,0.6);
-  transform: translate(-50%, -120%);
-  z-index: 9999;
+  transform: translate(-50%, 8px);
+  z-index: 20;
   pointer-events: none;
+  white-space: nowrap;
+  text-align: center;
   opacity: 0;
   transition: opacity 0.18s ease, transform 0.22s ease;
 }
 .copy-tip.show{
   opacity: 1;
-  transform: translate(-50%, -140%);
+  transform: translate(-50%, -2px);
 }
 
 
