@@ -125,68 +125,118 @@
 
         <!-- Programming Languages Section -->
         <section id="languages" class="card">
-            <h2>Learning</h2>
-            <div class="languages-grid">
-                <div class="language-icon">
-                    <div class="icon-wrapper">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />
+            <h2>Skills</h2>
+            
+            <div class="skills-category">
+                <h3 class="skills-category-title">Frontend</h3>
+                <div class="languages-grid">
+                    <div class="language-item" data-language="html">
+                        <button class="language-icon-trigger" type="button" aria-expanded="false" aria-controls="language-detail-html">
+                            <div class="icon-wrapper">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-plain.svg" alt="html" />
+                            </div>
+                            <p>HTML</p>
+                            <div class="proficiency" data-level="2">++</div>
+                        </button>
+                        <div class="language-detail-tab" id="language-detail-html" role="region" aria-label="HTML詳細" hidden>
+                            <p class="language-detail-text">このポートフォリオサイトの構造作成に使用</p>
+                        </div>
                     </div>
-                    <p>Python</p>
-                    <div class="proficiency" data-level="3">+++</div>
+
+                    <div class="language-item" data-language="css">
+                        <button class="language-icon-trigger" type="button" aria-expanded="false" aria-controls="language-detail-css">
+                            <div class="icon-wrapper">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-plain.svg" alt="css" />
+                            </div>
+                            <p>CSS</p>
+                            <div class="proficiency" data-level="2">++</div>
+                        </button>
+                        <div class="language-detail-tab" id="language-detail-css" role="region" aria-label="CSS詳細" hidden>
+                            <p class="language-detail-text">このポートフォリオサイトのスタイリングに使用</p>
+                        </div>
+                    </div>
+
+                    <div class="language-item" data-language="sass">
+                        <button class="language-icon-trigger" type="button" aria-expanded="false" aria-controls="language-detail-sass">
+                            <div class="icon-wrapper">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg" alt="Sass" />
+                            </div>
+                            <p>Sass</p>
+                            <div class="proficiency" data-level="2">++</div>
+                        </button>
+                        <div class="language-detail-tab" id="language-detail-sass" role="region" aria-label="Sass詳細" hidden>
+                            <p class="language-detail-text">このポートフォリオサイトのスタイル管理に使用</p>
+                        </div>
+                    </div>
+
+                    <div class="language-item" data-language="js">
+                        <button class="language-icon-trigger" type="button" aria-expanded="false" aria-controls="language-detail-js">
+                            <div class="icon-wrapper">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-plain.svg" alt="js"/>
+                            </div>
+                            <p>Javascript</p>
+                            <div class="proficiency" data-level="2">++</div>
+                        </button>
+                        <div class="language-detail-tab" id="language-detail-js" role="region" aria-label="Javascript詳細" hidden>
+                            <p class="language-detail-text">学校の授業で使用</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="language-icon">
-                    <div class="icon-wrapper">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ruby/ruby-original.svg" alt="Ruby" />
+            </div>
+
+            <div class="skills-category">
+                <h3 class="skills-category-title">Backend</h3>
+                <div class="languages-grid">
+                    <div class="language-item" data-language="python">
+                        <button class="language-icon-trigger" type="button" aria-expanded="false" aria-controls="language-detail-python">
+                            <div class="icon-wrapper">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original-wordmark.svg" />
+                            </div>
+                            <p>Python</p>
+                            <div class="proficiency" data-level="3">+++</div>
+                        </button>
+                        <div class="language-detail-tab" id="language-detail-python" role="region" aria-label="Python詳細" hidden>
+                            <p class="language-detail-text">ゲーム開発（Pygame）、データ処理、Google Colabでの実行環境に使用</p>
+                        </div>
                     </div>
-                    <p>Ruby</p>
-                    <div class="proficiency" data-level="1">+</div>
+
+                    <div class="language-item" data-language="ruby">
+                        <button class="language-icon-trigger" type="button" aria-expanded="false" aria-controls="language-detail-ruby">
+                            <div class="icon-wrapper">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ruby/ruby-plain.svg" alt="ruby" />
+                            </div>
+                            <p>Ruby</p>
+                            <div class="proficiency" data-level="1">+</div>
+                        </button>
+                        <div class="language-detail-tab" id="language-detail-ruby" role="region" aria-label="Ruby詳細" hidden>
+                            <p class="language-detail-text">学習中</p>
+                        </div>
+                    </div>
+
+                    <div class="language-item" data-language="c++">
+                        <button class="language-icon-trigger" type="button" aria-expanded="false" aria-controls="language-detail-cpp">
+                            <div class="icon-wrapper">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-plain.svg" alt="c++" />
+                            </div>
+                            <p>C++</p>
+                            <div class="proficiency" data-level="2">++</div>
+                        </button>
+                        <div class="language-detail-tab" id="language-detail-cpp" role="region" aria-label="C++詳細" hidden>
+                            <p class="language-detail-text">詳細説明</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="language-icon">
-                    <div class="icon-wrapper">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" />
-                    </div>
-                    <p>HTML</p>
-                    <div class="proficiency" data-level="2">++</div>
-                </div>
-                <div class="language-icon">
-                    <div class="icon-wrapper">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" />
-                    </div>
-                    <p>CSS</p>
-                    <div class="proficiency" data-level="2">++</div>
-                </div>
-                <div class="language-icon">
-                    <div class="icon-wrapper">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" alt="Sass" />
-                    </div>
-                    <p>Sass</p>
-                    <div class="proficiency" data-level="2">++</div>
-                </div>
-                <div class="language-icon">
-                    <div class="icon-wrapper">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" />
-                    </div>
-                    <p>Java</p>
-                    <div class="proficiency" data-level="2">++</div>
-                </div>
-                <!-- <div class="language-icon">
-                    <div class="icon-wrapper">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C" />
-                    </div>
-                    <p>C</p>
-                    <div class="proficiency" data-level="2">+</div>
-                </div> -->
             </div>
         </section>
 
-        <section id="information" class="card">
+        <!-- <section id="information" class="card">
             <h2>Information</h2>
             <div class="bottom-section">
                         <div class="gear gear--small"></div>
                         <a class="art-btn" href="contents/art.html" target="_blank" rel="noopener" aria-label="art">
                         </a>
                     </div>
-        </section>
+        </section> -->
     </main>
 
     <footer>
@@ -344,6 +394,42 @@
             }
 
             document.querySelectorAll('.project-carousel').forEach(initCarousel);
+
+            // Language detail toggle functionality
+            function setLanguageState(languageElem, isOpen){
+                if(!languageElem) return;
+                var trigger = languageElem.querySelector('.language-icon-trigger');
+                var detail = languageElem.querySelector('.language-detail-tab');
+                languageElem.classList.toggle('is-open', isOpen);
+                if(trigger){
+                    trigger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+                }
+                if(detail){
+                    detail.hidden = !isOpen;
+                }
+            }
+
+            function closeOtherLanguages(current){
+                document.querySelectorAll('.language-item.is-open').forEach(function(item){
+                    if(item !== current){
+                        setLanguageState(item, false);
+                    }
+                });
+            }
+
+            document.querySelectorAll('.language-item').forEach(function(language){
+                var trigger = language.querySelector('.language-icon-trigger');
+                if(!trigger) return;
+                trigger.addEventListener('click', function(ev){
+                    ev.preventDefault();
+                    ev.stopPropagation();
+                    var willOpen = !language.classList.contains('is-open');
+                    if(willOpen){
+                        closeOtherLanguages(language);
+                    }
+                    setLanguageState(language, willOpen);
+                });
+            });
         })();
         </script>
         <p>&copy; 2025 Tomaru Portfolio. All rights reserved.</p>

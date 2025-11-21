@@ -704,12 +704,32 @@ h1::after, h2::after {
   }
 }
 
+/* Skills Category */
+.skills-category {
+  margin-bottom: 40px;
+}
+
+.skills-category:last-child {
+  margin-bottom: 0;
+}
+
+.skills-category-title {
+  font-size: 1.3rem;
+  color: #fc00ff;
+  margin-bottom: 20px;
+  margin-top: 0;
+  text-shadow: 0 0 8px rgba(252, 0, 255, 0.4);
+  padding-bottom: 8px;
+  border-bottom: 2px solid rgba(252, 0, 255, 0.3);
+}
+
 /* Languages Grid */
 .languages-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 120px));
+  gap: 20px;
   margin-top: 20px;
+  justify-content: start;
 }
 
 .learning-intro {
@@ -776,26 +796,49 @@ h1::after, h2::after {
   color: #ffcc00;
 }
 
-.language-icon {
-  text-align: center;
-  transition: transform 0.3s ease;
+.language-item {
+  position: relative;
 }
 
-.language-icon:hover {
+.language-icon-trigger {
+  width: 100%;
+  border: none;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  padding: 0;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+
+  &:focus-visible {
+    outline: 2px solid #00fffc;
+    outline-offset: 4px;
+    border-radius: 4px;
+  }
+}
+
+.language-icon-trigger:hover {
   transform: scale(1.1);
 }
 
 .icon-wrapper {
-  width: 80px;
-  height: 80px;
-  margin: 0 auto 12px;
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: rgba(252, 0, 255, 0.08);
   border: 1px solid #fc00ff;
   border-radius: 8px;
-  padding: 8px;
+  padding: 6px;
+  transition: all 0.3s ease;
+}
+
+.language-icon-trigger:hover .icon-wrapper {
+  background: rgba(252, 0, 255, 0.15);
+  box-shadow: 0 0 15px rgba(252, 0, 255, 0.4);
 }
 
 .icon-wrapper img {
@@ -805,10 +848,46 @@ h1::after, h2::after {
   filter: drop-shadow(0 0 8px rgba(0, 255, 252, 0.3));
 }
 
-.language-icon p {
+.language-icon-trigger p {
   color: #00fffc;
   font-size: 0.85rem;
   margin: 0;
+}
+
+.language-detail-tab {
+  margin-top: 16px;
+  padding: 16px;
+  background: rgba(16, 16, 32, 0.85);
+  border: 1px solid rgba(0, 255, 252, 0.3);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  animation: slideDown 0.3s ease-out;
+  overflow: hidden;
+}
+
+.language-detail-tab[hidden] {
+  display: none;
+}
+
+.language-detail-text {
+  margin: 0;
+  color: #e0e0ff;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  text-align: left;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    max-height: 200px;
+  }
 }
 
 .proficiency {
@@ -842,8 +921,9 @@ h1::after, h2::after {
 
 .tree-item {
   margin: 0;
-  padding: 0;
+  padding-left: 34px;
   list-style: none;
+  position: relative;
 }
 
 .tree-date {
@@ -872,6 +952,29 @@ h1::after, h2::after {
   border-radius: 12px;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45),
     0 0 30px rgba(0, 255, 252, 0.12);
+}
+
+.tree-children > li::before {
+  content: '';
+  position: absolute;
+  left: -18px;
+  top: 0;
+  bottom: 0;
+  width: 12px;
+  border-left: 2px solid rgba(0, 255, 252, 0.35);
+}
+
+.tree-children > li::after {
+  content: '';
+  position: absolute;
+  left: -18px;
+  top: 28px;
+  width: 18px;
+  border-top: 2px solid rgba(0, 255, 252, 0.35);
+}
+
+.tree-children > li:last-child::before {
+  border-image: linear-gradient(to bottom, rgba(0, 255, 252, 0.35), rgba(0, 255, 252, 0)) 1;
 }
 
 .tree-node-group {
