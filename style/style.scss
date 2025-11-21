@@ -712,6 +712,70 @@ h1::after, h2::after {
   margin-top: 20px;
 }
 
+.learning-intro {
+  margin-bottom: 20px;
+  padding: 16px;
+  background: rgba(8, 8, 16, 0.7);
+  border: 1px solid rgba(0, 255, 252, 0.3);
+  border-radius: 6px;
+  box-shadow: inset 0 0 12px rgba(0, 255, 252, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.learning-status {
+  margin: 0;
+  color: #e0e0ff;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.learning-books {
+  padding: 12px 14px;
+  background: rgba(252, 0, 255, 0.08);
+  border: 1px dashed rgba(252, 0, 255, 0.4);
+  border-radius: 6px;
+}
+
+.learning-books__title {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ffcc00;
+  margin-bottom: 8px;
+}
+
+.learning-books__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.learning-book-item {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  font-size: 0.85rem;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  padding: 6px 8px;
+}
+
+.learning-book-item__title {
+  font-weight: 600;
+  color: #00fffc;
+}
+
+.learning-book-item__note {
+  font-size: 0.8rem;
+  color: #ffcc00;
+}
+
 .language-icon {
   text-align: center;
   transition: transform 0.3s ease;
@@ -1085,7 +1149,7 @@ footer {
 .social-icon:hover {
   background: rgba(252, 0, 255, 0.3);
   box-shadow: 0 0 15px rgba(252, 0, 255, 0.5);
-  transform: scale(1.15);
+  transform: translateY(-2px);
 }
 
 .social-icon img {
