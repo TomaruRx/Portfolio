@@ -57,11 +57,31 @@
         <section id="projects" class="card">
             <h2>Project</h2>
             <div class="projects-grid">
-                <article class="project-item">
-                    <h3>8✕8まるさんかくオセロ</h3>
-                    <p>8*8の盤面で行うオセロゲーム</p>
-                    <!-- <a class="google-colab" href="https://colab.research.google.com/drive/1PtBF6lio4tCeXIPoYC6H-dmlU2J05Nq8?usp=sharing" target="_blank" rel="noopener" aria-label="Colab"> -->
-                    <div class="gear gear--small"></div>
+                <article class="project-item project-item--interactive" data-project="othello">
+                    <button class="project-card-trigger" type="button" aria-expanded="false" aria-controls="project-detail-othello">
+                        <div class="project-icon othello-icon" aria-hidden="true">
+                            <span class="othello-piece othello-piece--circle"></span>
+                            <span class="othello-piece othello-piece--triangle"></span>
+                        </div>
+                        <div class="project-summary">
+                            <h3>8✕8まるさんかくオセロ</h3>
+                            <p>8*8の盤面で行うオセロゲーム</p>
+                            <span class="project-hint">タップして詳細を見る</span>
+                        </div>
+                    </button>
+                    <div class="project-detail-tab" id="project-detail-othello" role="region" aria-label="8✕8まるさんかくオセロ詳細" hidden>
+                        <p class="project-detail-text">円と三角の駒を使って、基本ルールを保ちながら駆け引きを学べる8×8盤のオセロゲームです。Google Colab上で誰でもすぐに遊べます。</p>
+                        <a class="project-link" href="https://colab.research.google.com/drive/1PtBF6lio4tCeXIPoYC6H-dmlU2J05Nq8?usp=sharing" target="_blank" rel="noopener" aria-label="Colab">Google Colabで実行</a>
+                        <div class="project-carousel" data-active-index="0">
+                            <button class="carousel-nav prev" type="button" aria-label="前の画像">◀</button>
+                            <div class="carousel-frame">
+                                <img src="contents/image/othello1.png" alt="ゲーム説明" class="carousel-slide is-active">
+                                <img src="contents/image/othello2.png" alt="初期配置画面" class="carousel-slide">
+                                <img src="contents/image/othello3.png" alt="中盤配置画面" class="carousel-slide">
+                            </div>
+                            <button class="carousel-nav next" type="button" aria-label="次の画像">▶</button>
+                        </div>
+                    </div>
                 </article>
                 <article class="project-item">
                     <h3>プロジェクト2</h3>
@@ -218,6 +238,81 @@
                     }
                 }
             });
+
+            function setProjectState(projectElem, isOpen){
+                if(!projectElem) return;
+                var trigger = projectElem.querySelector('.project-card-trigger');
+                var detail = projectElem.querySelector('.project-detail-tab');
+                projectElem.classList.toggle('is-open', isOpen);
+                if(trigger){
+                    trigger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+                }
+                if(detail){
+                    detail.hidden = !isOpen;
+                }
+            }
+
+            function closeOtherProjects(current){
+                document.querySelectorAll('.project-item--interactive.is-open').forEach(function(item){
+                    if(item !== current){
+                        setProjectState(item, false);
+                    }
+                });
+            }
+
+            document.querySelectorAll('.project-item--interactive').forEach(function(project){
+                var trigger = project.querySelector('.project-card-trigger');
+                if(!trigger) return;
+                trigger.addEventListener('click', function(ev){
+                    ev.preventDefault();
+                    ev.stopPropagation();
+                    var willOpen = !project.classList.contains('is-open');
+                    if(willOpen){
+                        closeOtherProjects(project);
+                    }
+                    setProjectState(project, willOpen);
+                });
+            });
+
+            function initCarousel(carousel){
+                var frame = carousel.querySelector('.carousel-frame');
+                if(!frame) return;
+                var slides = frame.querySelectorAll('.carousel-slide');
+                if(!slides.length) return;
+                var index = parseInt(carousel.getAttribute('data-active-index') || '0', 10);
+
+                function updateSlides(){
+                    slides.forEach(function(slide, idx){
+                        slide.classList.toggle('is-active', idx === index);
+                    });
+                    carousel.setAttribute('data-active-index', index);
+                }
+
+                var prev = carousel.querySelector('.carousel-nav.prev');
+                var next = carousel.querySelector('.carousel-nav.next');
+
+                if(prev){
+                    prev.addEventListener('click', function(e){
+                        e.preventDefault();
+                        e.stopPropagation();
+                        index = (index - 1 + slides.length) % slides.length;
+                        updateSlides();
+                    });
+                }
+
+                if(next){
+                    next.addEventListener('click', function(e){
+                        e.preventDefault();
+                        e.stopPropagation();
+                        index = (index + 1) % slides.length;
+                        updateSlides();
+                    });
+                }
+
+                updateSlides();
+            }
+
+            document.querySelectorAll('.project-carousel').forEach(initCarousel);
         })();
         </script>
         <p>&copy; 2025 Tomaru Portfolio. All rights reserved.</p>
