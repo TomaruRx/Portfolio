@@ -3,38 +3,29 @@
   font-family: "x12y16pxMaruMonica";
   src: url("./X12Y16PXMARUMONICA.ttf") format("truetype");
 }
-
 @keyframes glitch {
   0% {
-    text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
- 0.025em 0.04em 0 #fffc00;
+    text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff, 0.025em 0.04em 0 #fffc00;
   }
   15% {
-    text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
- 0.025em 0.04em 0 #fffc00;
+    text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff, 0.025em 0.04em 0 #fffc00;
   }
   16% {
-    text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff,
- -0.05em -0.05em 0 #fffc00;
+    text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff, -0.05em -0.05em 0 #fffc00;
   }
   49% {
-    text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff,
- -0.05em -0.05em 0 #fffc00;
+    text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff, -0.05em -0.05em 0 #fffc00;
   }
   50% {
-    text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 #fc00ff,
- 0 -0.04em 0 #fffc00;
+    text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 #fc00ff, 0 -0.04em 0 #fffc00;
   }
   99% {
-    text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 #fc00ff,
- 0 -0.04em 0 #fffc00;
+    text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 #fc00ff, 0 -0.04em 0 #fffc00;
   }
   100% {
-    text-shadow: -0.05em 0 0 #00fffc, -0.025em -0.04em 0 #fc00ff,
- -0.04em -0.025em 0 #fffc00;
+    text-shadow: -0.05em 0 0 #00fffc, -0.025em -0.04em 0 #fc00ff, -0.04em -0.025em 0 #fffc00;
   }
 }
-
 body {
   background-color: #0a0a0f;
   font-family: "x12y16pxMaruMonica", monospace;
@@ -44,7 +35,7 @@ body {
 }
 
 body::before {
-  content: '';
+  content: "";
   position: fixed;
   top: 0;
   left: 0;
@@ -60,7 +51,8 @@ body::before {
   top: 0;
   z-index: 100;
   background: rgba(10, 10, 15, 0.95);
-  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
   box-shadow: 0 4px 12px rgba(0, 255, 252, 0.15);
 }
 
@@ -71,7 +63,8 @@ body::before {
   background: rgba(16, 16, 32, 0.7);
   border: 1px solid #00fffc;
   box-shadow: 0 0 15px rgba(0, 255, 252, 0.3);
-  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
   position: relative;
   overflow: hidden;
   display: flex;
@@ -101,7 +94,7 @@ body::before {
 }
 
 .headers::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -50%;
   left: -50%;
@@ -125,13 +118,14 @@ body::before {
   background-color: rgba(16, 16, 32, 0.8);
   border: 1px solid #fc00ff;
   box-shadow: 0 0 10px rgba(252, 0, 255, 0.3);
-  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
   transition: all 0.3s ease;
   pointer-events: auto;
 }
 
 .list-btn span {
-  content: '';
+  content: "";
   display: block;
   height: 3px;
   width: 25px;
@@ -141,7 +135,7 @@ body::before {
 }
 
 .list-btn span::before {
-  content: '';
+  content: "";
   display: block;
   height: 3px;
   width: 25px;
@@ -152,7 +146,7 @@ body::before {
 }
 
 .list-btn span::after {
-  content: '';
+  content: "";
   display: block;
   height: 3px;
   width: 25px;
@@ -192,11 +186,12 @@ body::before {
   transition: all 0.5s;
   box-shadow: -5px 0 20px rgba(252, 0, 255, 0.3);
   border-left: 1px solid #fc00ff;
-  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
 }
 
 .list-content::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -337,29 +332,29 @@ h1::after, h2::after {
     transform: translate(25%, 25%);
   }
 }
-
 @keyframes noise-1 {
   0%, 20%, 40%, 60%, 70%, 90% {
-    clip-path: inset(80% 0 0 0);
+    -webkit-clip-path: inset(80% 0 0 0);
+            clip-path: inset(80% 0 0 0);
   }
   10%, 30%, 50%, 65%, 80%, 100% {
-    clip-path: inset(0 0 80% 0);
+    -webkit-clip-path: inset(0 0 80% 0);
+            clip-path: inset(0 0 80% 0);
   }
 }
-
 @keyframes noise-2 {
   0%, 20%, 40%, 60%, 70%, 90% {
-    clip-path: inset(0 0 80% 0);
+    -webkit-clip-path: inset(0 0 80% 0);
+            clip-path: inset(0 0 80% 0);
   }
   10%, 30%, 50%, 65%, 80%, 100% {
-    clip-path: inset(80% 0 0 0);
+    -webkit-clip-path: inset(80% 0 0 0);
+            clip-path: inset(80% 0 0 0);
   }
 }
-
 /* ============================================================================
    Steampunk Layout Additions (container, card, projects, languages, tree)
    ============================================================================ */
-
 .container {
   max-width: 1100px;
   margin: 40px auto;
@@ -468,7 +463,8 @@ h1::after, h2::after {
 .icon-wrapper img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   filter: drop-shadow(0 0 8px rgba(0, 255, 252, 0.3));
 }
 
@@ -563,7 +559,7 @@ h1::after, h2::after {
 }
 
 .tree-children > li::before {
-  content: '';
+  content: "";
   position: absolute;
   left: -18px;
   top: 16px;
@@ -580,9 +576,7 @@ h1::after, h2::after {
   display: inline-block;
   border-radius: 50%;
   position: relative;
-  background: 
-    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.02) 10%, rgba(0, 0, 0, 0.2) 80%),
-    conic-gradient(#fc00ff 0deg 30deg, rgba(0, 0, 0, 0.1) 30deg 60deg, #fc00ff 60deg 90deg, rgba(0, 0, 0, 0.15) 90deg 120deg, #fc00ff 120deg 150deg, rgba(0, 0, 0, 0.1) 150deg 180deg, #fc00ff 180deg 210deg, rgba(0, 0, 0, 0.12) 210deg 240deg, #fc00ff 240deg 270deg, rgba(0, 0, 0, 0.08) 270deg 300deg, #fc00ff 300deg 330deg, rgba(0, 0, 0, 0.08) 330deg 360deg);
+  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.02) 10%, rgba(0, 0, 0, 0.2) 80%), conic-gradient(#fc00ff 0deg 30deg, rgba(0, 0, 0, 0.1) 30deg 60deg, #fc00ff 60deg 90deg, rgba(0, 0, 0, 0.15) 90deg 120deg, #fc00ff 120deg 150deg, rgba(0, 0, 0, 0.1) 150deg 180deg, #fc00ff 180deg 210deg, rgba(0, 0, 0, 0.12) 210deg 240deg, #fc00ff 240deg 270deg, rgba(0, 0, 0, 0.08) 270deg 300deg, #fc00ff 300deg 330deg, rgba(0, 0, 0, 0.08) 330deg 360deg);
   box-shadow: 0 0 15px rgba(252, 0, 255, 0.4), inset 0 4px 8px rgba(255, 255, 255, 0.08);
 }
 
@@ -591,31 +585,35 @@ h1::after, h2::after {
   margin: 12px 0 8px;
   text-align: center;
 }
-.hobby-image img{
+
+.hobby-image img {
   display: inline-block;
   max-width: 100%;
   height: auto;
   width: min(520px, 92%);
   border-radius: 6px;
   border: 2px solid #fc00ff;
-  box-shadow: 0 8px 24px rgba(252,0,255,0.12), 0 2px 6px rgba(0,0,0,0.5) inset;
+  box-shadow: 0 8px 24px rgba(252, 0, 255, 0.12), 0 2px 6px rgba(0, 0, 0, 0.5) inset;
 }
 
 /* discourage saving: project media wrapper + center watermark */
-.project-media{
+.project-media {
   position: relative;
   display: block;
   margin: auto;
+  width: -moz-fit-content;
   width: fit-content;
   -webkit-user-select: none;
   -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   margin-top: auto;
 }
-.project-media img{ -webkit-user-drag: none; }
 
-.watermark{
+.project-media img {
+  -webkit-user-drag: none;
+}
+
+.watermark {
   position: absolute;
   pointer-events: none;
   font-weight: 800;
@@ -626,46 +624,49 @@ h1::after, h2::after {
 }
 
 /* center horizontal bar watermark */
-.watermark-center{
+.watermark-center {
   left: 50%;
   top: 50%;
-  transform: translate(-50%,-50%);
-  background: rgba(255,255,255,0.3);
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.3);
   color: #0a0a0a;
   padding: 8px 24px;
   font-size: 1rem;
   line-height: 1.2;
   border-radius: 4px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
   max-width: 90%;
   white-space: normal;
   overflow-wrap: break-word;
 }
 
 /* stronger overlay variant: repeated faint stripes across image (optional) */
-.project-media::before{
-  content: '';
+.project-media::before {
+  content: "";
   position: absolute;
   inset: 0;
-  background-image: repeating-linear-gradient(135deg, rgba(252,0,255,0.02) 0 8px, transparent 8px 16px);
+  background-image: repeating-linear-gradient(135deg, rgba(252, 0, 255, 0.02) 0 8px, transparent 8px 16px);
   pointer-events: none;
 }
 
-@media (max-width:640px){
-  .watermark-center{ padding: 6px 12px; font-size:0.9rem; }
+@media (max-width: 640px) {
+  .watermark-center {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
 }
-
 /* Disclaimer for images / works */
-.disclaimer{
+.disclaimer {
   font-size: 0.82rem;
   color: #e0c6ff;
   margin-top: 8px;
   opacity: 0.95;
   text-align: center;
   padding: 8px 12px;
-  border-top: 1px solid rgba(252,0,255,0.08);
+  border-top: 1px solid rgba(252, 0, 255, 0.08);
 }
-.footer-disclaimer{
+
+.footer-disclaimer {
   font-size: 0.78rem;
   color: #f3e6ff;
   opacity: 0.9;
@@ -673,7 +674,7 @@ h1::after, h2::after {
 }
 
 /* Bottom section: gear and instagram button side-by-side */
-.bottom-section{
+.bottom-section {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -681,12 +682,12 @@ h1::after, h2::after {
   gap: 12px;
 }
 
-.bottom-section .insta-btn{
+.bottom-section .insta-btn {
   margin-left: auto;
 }
 
 /* Image toggle button */
-.toggle-image-btn{
+.toggle-image-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -702,36 +703,43 @@ h1::after, h2::after {
   box-shadow: 0 4px 12px rgba(252, 0, 255, 0.2);
 }
 
-.toggle-image-btn:hover{
+.toggle-image-btn:hover {
   background: rgba(252, 0, 255, 0.25);
   box-shadow: 0 6px 16px rgba(252, 0, 255, 0.35);
   transform: scale(1.1);
 }
 
-.toggle-image-btn:active{
+.toggle-image-btn:active {
   transform: scale(0.95);
 }
 
 /* Instagram button under each work */
-.insta-btn{
+.insta-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 40px;
   height: 40px;
   padding: 0;
-  background: rgba(255,255,255,0.98);
+  background: rgba(255, 255, 255, 0.98);
   border: 2px solid #fc00ff;
   border-radius: 50%;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.28);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.28);
   text-decoration: none;
   transition: all 0.3s ease;
 }
-.insta-btn svg{ display:block; }
-.insta-btn:hover{ transform: translateY(-3px); box-shadow: 0 10px 26px rgba(0,0,0,0.36); }
+
+.insta-btn svg {
+  display: block;
+}
+
+.insta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.36);
+}
 
 .gear::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 20%;
   top: 20%;
@@ -755,10 +763,13 @@ h1::after, h2::after {
 }
 
 @keyframes slow-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
-
 footer {
   margin-top: 40px;
   padding: 20px;
@@ -801,21 +812,21 @@ footer {
 }
 
 /* social item wrapper and label */
-.social-item{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  gap:6px;
+.social-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
 }
 
-.social-label{
+.social-label {
   color: #00fffc;
   font-size: 0.75rem;
   margin-bottom: 4px;
 }
 
 /* Copy button for email */
-.copy-btn{
+.copy-btn {
   margin-top: 6px;
   padding: 6px 10px;
   font-size: 0.75rem;
@@ -824,35 +835,38 @@ footer {
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
   transition: transform 0.12s ease, box-shadow 0.12s ease;
 }
-.copy-btn:hover{ transform: translateY(-2px); }
-.copy-btn.copied{
+
+.copy-btn:hover {
+  transform: translateY(-2px);
+}
+
+.copy-btn.copied {
   background: #9be23a;
   color: #06210a;
 }
 
 /* copy tip (cyberpunk style) */
-.copy-tip{
+.copy-tip {
   position: fixed;
   padding: 8px 12px;
   border-radius: 6px;
   font-weight: 700;
   font-size: 0.9rem;
   color: #00fffc;
-  background: linear-gradient(90deg, rgba(0,0,0,0.9), rgba(8,6,18,0.85));
-  box-shadow: 0 0 18px rgba(0,255,252,0.35), 0 0 36px rgba(252,0,255,0.12) inset;
-  border: 1px solid rgba(0,255,252,0.6);
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.9), rgba(8, 6, 18, 0.85));
+  box-shadow: 0 0 18px rgba(0, 255, 252, 0.35), 0 0 36px rgba(252, 0, 255, 0.12) inset;
+  border: 1px solid rgba(0, 255, 252, 0.6);
   transform: translate(-50%, -120%);
   z-index: 9999;
   pointer-events: none;
   opacity: 0;
   transition: opacity 0.18s ease, transform 0.22s ease;
 }
-.copy-tip.show{
+
+.copy-tip.show {
   opacity: 1;
   transform: translate(-50%, -140%);
-}
-
-
+}/*# sourceMappingURL=style.css.map */
