@@ -387,6 +387,49 @@ h1::after, h2::after {
   font-size: 1.8rem;
 }
 
+/* Qualification card styles */
+.qualifications-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  padding: 12px 0 0;
+}
+.qualification-item {
+  background: linear-gradient(135deg, rgba(16,16,32,0.85), rgba(32,16,48,0.85));
+  border: 1px solid rgba(252,0,255,0.12);
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(252,0,255,0.08), inset 0 1px 0 rgba(255,255,255,0.02);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: block;
+}
+.qualification-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 48px rgba(252,0,255,0.18);
+}
+.qualification-item h3 {
+  margin: 0 0 6px 0;
+  color: #fc00ff;
+  text-shadow: 0 0 8px rgba(252,0,255,0.25);
+}
+.qualification-meta {
+  font-size: 13px;
+  color: #bffcf9;
+  margin-bottom: 8px;
+}
+
+.qualification-sep {
+  border: none;
+  border-top: 1px dashed rgba(191,252,249,0.18);
+  margin: 10px 0;
+}
+.qualification-desc {
+  margin: 0;
+  color: #e6ffff;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
 /* Projects Grid */
 .projects-grid {
   display: grid;
