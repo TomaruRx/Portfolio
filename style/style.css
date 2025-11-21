@@ -474,6 +474,54 @@ h1::after, h2::after {
   border: 1px solid rgba(0, 255, 252, 0.3);
 }
 
+.onlyup-icon {
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.15), transparent 55%), linear-gradient(160deg, rgba(0, 0, 0, 0.85), rgba(15, 10, 25, 0.95));
+  overflow: hidden;
+}
+
+.onlyup-rocket {
+  width: 32px;
+  height: 82px;
+  border-radius: 16px 16px 8px 8px;
+  background: linear-gradient(180deg, #ffffff 0%, #a7c7ff 70%, #f5f5f5 100%);
+  position: relative;
+  display: inline-block;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+.onlyup-rocket::before, .onlyup-rocket::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 22px;
+  background: linear-gradient(180deg, #ff5f9e, #ffb347);
+  bottom: -18px;
+  border-radius: 10px;
+  filter: blur(0.5px);
+}
+.onlyup-rocket::before {
+  left: -16px;
+}
+.onlyup-rocket::after {
+  right: -16px;
+}
+
+.onlyup-star {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: radial-gradient(circle, #fff5c7 0%, rgba(255, 255, 255, 0) 70%);
+  border-radius: 50%;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.8);
+}
+.onlyup-star--1 {
+  top: 24px;
+  left: 28px;
+}
+.onlyup-star--2 {
+  bottom: 22px;
+  right: 34px;
+}
+
 .othello-piece {
   width: 48px;
   height: 48px;

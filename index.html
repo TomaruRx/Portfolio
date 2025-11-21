@@ -65,12 +65,12 @@
                         </div>
                         <div class="project-summary">
                             <h3>8✕8まるさんかくオセロ</h3>
-                            <p>8*8の盤面で行うオセロゲーム</p>
+                            <p>8✕8の盤面で行うシンプルなオセロゲーム</p>
                             <span class="project-hint">タップして詳細を見る</span>
                         </div>
                     </button>
                     <div class="project-detail-tab" id="project-detail-othello" role="region" aria-label="8✕8まるさんかくオセロ詳細" hidden>
-                        <p class="project-detail-text">円と三角の駒を使って、基本ルールを保ちながら駆け引きを学べる8×8盤のオセロゲームです。Google Colab上で誰でもすぐに遊べます。</p>
+                        <p class="project-detail-text">円と三角の駒を使って、基本ルールを保ちながら駆け引きを学べる8×8盤のオセロゲームです。Google Colab上で誰でもすぐに遊べます。</p>[Pythonで制作]</p>
                         <a class="project-link" href="https://colab.research.google.com/drive/1PtBF6lio4tCeXIPoYC6H-dmlU2J05Nq8?usp=sharing" target="_blank" rel="noopener" aria-label="Colab">Google Colabで実行</a>
                         <div class="project-carousel" data-active-index="0">
                             <button class="carousel-nav prev" type="button" aria-label="前の画像">◀</button>
@@ -83,10 +83,31 @@
                         </div>
                     </div>
                 </article>
-                <article class="project-item">
-                    <h3>プロジェクト2</h3>
-                    <p>ここにプロジェクトの説明を書きます。</p>
-                    <div class="gear gear--small"></div>
+                <article class="project-item project-item--interactive" data-project="onlyup">
+                    <button class="project-card-trigger" type="button" aria-expanded="false" aria-controls="project-detail-onlyup">
+                        <div class="project-icon onlyup-icon" aria-hidden="true">
+                            <span class="onlyup-rocket"></span>
+                            <span class="onlyup-star onlyup-star--1"></span>
+                            <span class="onlyup-star onlyup-star--2"></span>
+                        </div>
+                        <div class="project-summary">
+                            <h3>Only Up!-style Game (Hisayoshi　～星にあこがれて～)</h3>
+                            <p>星空を目指して登る2Dプラットフォームゲーム</p>
+                            <span class="project-hint">タップして詳細を見る</span>
+                        </div>
+                    </button>
+                    <div class="project-detail-tab" id="project-detail-onlyup" role="region" aria-label="OnlyUp-style Game詳細" hidden>
+                        <p class="project-detail-text">狭い足場と大胆なジャンプを繰り返し、失敗すると一気に落下するスリルを味わえるOnly Up!風の2Dプラットフォームゲームです。操作キャラクターは担任の先生をモデルにしています。2025年度の高専祭で展示しました。</p>この作品はチームで共同開発したものです。私はタイトル画面デザインの調整や、テストプレイを担当しました。</p><2人プレイ可能> [Python(Pygame)で制作]</p>
+                        <div class="project-carousel" data-active-index="0">
+                            <button class="carousel-nav prev" type="button" aria-label="前の画像">◀</button>
+                            <div class="carousel-frame">
+                                <img src="contents/image/onlyupstyle1.png" alt="OnlyUp-style Game ゲームモード選択画面" class="carousel-slide is-active">
+                                <img src="contents/image/onlyupstyle2.png" alt="OnlyUp-style Game 会話機能" class="carousel-slide">
+                                <img src="contents/image/onlyupstyle3.png" alt="OnlyUp-style Game 2人プレイ画面" class="carousel-slide">
+                            </div>
+                            <button class="carousel-nav next" type="button" aria-label="次の画像">▶</button>
+                        </div>
+                    </div>
                 </article>
                 <!-- <article class="project-item">
                     <h3>プロジェクト3</h3>
