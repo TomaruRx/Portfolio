@@ -1178,8 +1178,20 @@ h1::after, h2::after {
   gap: 12px;
 }
 
-.bottom-section .insta-btn{
+.bottom-section .insta-link{
   margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.insta-label{
+  color: #ffddcc;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-shadow: 0 0 6px rgba(252,0,255,0.12);
+  white-space: nowrap;
 }
 
 /* Image toggle button */
