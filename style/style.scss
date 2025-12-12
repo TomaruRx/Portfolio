@@ -99,6 +99,13 @@ body::before {
   color: #ffffff;
   text-shadow: 0 0 4px rgba(255, 255, 255, 0.3);
 }
+  
+.visitor-count{
+  margin-top: 6px;
+  color: #ffdd99;
+  font-size: 0.95rem;
+  text-shadow: 0 0 6px rgba(252,0,255,0.08);
+}
 
 .headers::before {
   content: '';
