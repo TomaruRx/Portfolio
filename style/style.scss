@@ -4,6 +4,126 @@
   src: url("./X12Y16PXMARUMONICA.TTF") format("truetype");
 }
 
+/* ==========================================================================
+   Light-mode overrides for Post page (body class: .light-post)
+   Scoped so only the Post page becomes bright/clean.
+   ========================================================================== */
+.light-post {
+  background-color: #fbfbfe;
+  color: #101018;
+
+  &::before {
+    display: none; /* hide scanline overlay on light page */
+  }
+
+  #header {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 8px rgba(16, 24, 40, 0.06);
+    border-bottom: 1px solid rgba(16, 24, 40, 0.04);
+  }
+
+  .headers {
+    background: rgba(255, 255, 255, 0.96);
+    border: 1px solid rgba(16, 24, 40, 0.04);
+    box-shadow: none;
+    color: #111;
+  }
+
+  h1, h2 {
+    color: #0b3d91;
+    text-shadow: none;
+    animation: none;
+  }
+
+  .container,
+  .card,
+  .project-item,
+  .project-detail-tab {
+    background: #ffffff;
+    border: 1px solid rgba(16, 24, 40, 0.04);
+    box-shadow: 0 8px 24px rgba(16, 24, 40, 0.04);
+    color: #222;
+  }
+
+  .qualification-item {
+    background: linear-gradient(180deg, #ffffff, #fbfbfb);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    color: #111;
+  }
+
+  .project-item h3,
+  .project-summary p {
+    color: #0b3d91;
+  }
+
+  .project-item p,
+  .project-detail-text,
+  .learning-status {
+    color: #333;
+  }
+
+  .project-link {
+    background: #eef6ff;
+    color: #0b3d91;
+    border: 1px solid #cfe4ff;
+  }
+
+  .list-content {
+    background: linear-gradient(180deg, #ffffff, #f6f7fa);
+    border-left: 1px solid rgba(16, 24, 40, 0.04);
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.04);
+  }
+
+  .list-content ul li a {
+    color: #0b3d91;
+    background: none;
+  }
+
+  .insta-label {
+    color: #6b6b6b;
+    text-shadow: none;
+  }
+
+  .toggle-image-btn,
+  .insta-btn {
+    background: #f4f6fb;
+    border-color: #d0d8ee;
+    color: #0b3d91;
+    box-shadow: 0 2px 8px rgba(16, 24, 40, 0.04);
+  }
+
+  .project-icon {
+    border: 2px solid rgba(11, 61, 145, 0.08);
+    background: linear-gradient(180deg, #eef7ff, #ffffff);
+    box-shadow: none;
+  }
+
+  .watermark-center {
+    background: rgba(255, 255, 255, 0.8);
+    color: #222;
+    box-shadow: none;
+  }
+
+  footer {
+    color: #0b3d91;
+    border-top: 1px solid rgba(16, 24, 40, 0.04);
+    background: transparent;
+  }
+
+  a {
+    color: #0b3d91;
+  }
+
+  .copy-tip {
+    background: #ffffff;
+    color: #0b3d91;
+    box-shadow: 0 6px 18px rgba(16, 24, 40, 0.06);
+    border: 1px solid rgba(11, 61, 145, 0.06);
+  }
+
+  img { filter: none; }
+}
+
 @keyframes glitch {
   0% {
     text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,

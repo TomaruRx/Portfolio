@@ -3,6 +3,109 @@
   font-family: "x12y16pxMaruMonica";
   src: url("./X12Y16PXMARUMONICA.TTF") format("truetype");
 }
+/* ==========================================================================
+   Light-mode overrides for Post page (body class: .light-post)
+   Scoped so only the Post page becomes bright/clean.
+   ========================================================================== */
+.light-post {
+  background-color: #fbfbfe;
+  color: #101018;
+}
+.light-post::before {
+  display: none; /* hide scanline overlay on light page */
+}
+.light-post #header {
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 8px rgba(16, 24, 40, 0.06);
+  border-bottom: 1px solid rgba(16, 24, 40, 0.04);
+}
+.light-post .headers {
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(16, 24, 40, 0.04);
+  box-shadow: none;
+  color: #111;
+}
+.light-post h1, .light-post h2 {
+  color: #0b3d91;
+  text-shadow: none;
+  animation: none;
+}
+.light-post .container,
+.light-post .card,
+.light-post .project-item,
+.light-post .project-detail-tab {
+  background: #ffffff;
+  border: 1px solid rgba(16, 24, 40, 0.04);
+  box-shadow: 0 8px 24px rgba(16, 24, 40, 0.04);
+  color: #222;
+}
+.light-post .qualification-item {
+  background: linear-gradient(180deg, #ffffff, #fbfbfb);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  color: #111;
+}
+.light-post .project-item h3,
+.light-post .project-summary p {
+  color: #0b3d91;
+}
+.light-post .project-item p,
+.light-post .project-detail-text,
+.light-post .learning-status {
+  color: #333;
+}
+.light-post .project-link {
+  background: #eef6ff;
+  color: #0b3d91;
+  border: 1px solid #cfe4ff;
+}
+.light-post .list-content {
+  background: linear-gradient(180deg, #ffffff, #f6f7fa);
+  border-left: 1px solid rgba(16, 24, 40, 0.04);
+  box-shadow: -5px 0 20px rgba(0, 0, 0, 0.04);
+}
+.light-post .list-content ul li a {
+  color: #0b3d91;
+  background: none;
+}
+.light-post .insta-label {
+  color: #6b6b6b;
+  text-shadow: none;
+}
+.light-post .toggle-image-btn,
+.light-post .insta-btn {
+  background: #f4f6fb;
+  border-color: #d0d8ee;
+  color: #0b3d91;
+  box-shadow: 0 2px 8px rgba(16, 24, 40, 0.04);
+}
+.light-post .project-icon {
+  border: 2px solid rgba(11, 61, 145, 0.08);
+  background: linear-gradient(180deg, #eef7ff, #ffffff);
+  box-shadow: none;
+}
+.light-post .watermark-center {
+  background: rgba(255, 255, 255, 0.8);
+  color: #222;
+  box-shadow: none;
+}
+.light-post footer {
+  color: #0b3d91;
+  border-top: 1px solid rgba(16, 24, 40, 0.04);
+  background: transparent;
+}
+.light-post a {
+  color: #0b3d91;
+}
+.light-post .copy-tip {
+  background: #ffffff;
+  color: #0b3d91;
+  box-shadow: 0 6px 18px rgba(16, 24, 40, 0.06);
+  border: 1px solid rgba(11, 61, 145, 0.06);
+}
+.light-post img {
+  filter: none;
+}
+
 @keyframes glitch {
   0% {
     text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff, 0.025em 0.04em 0 #fffc00;
@@ -91,6 +194,13 @@ body::before {
   margin: 2px 0;
   color: #ffffff;
   text-shadow: 0 0 4px rgba(255, 255, 255, 0.3);
+}
+
+.visitor-count {
+  margin-top: 6px;
+  color: #ffdd99;
+  font-size: 0.95rem;
+  text-shadow: 0 0 6px rgba(252, 0, 255, 0.08);
 }
 
 .headers::before {
@@ -1351,4 +1461,33 @@ footer {
 .copy-tip.show {
   opacity: 1;
   transform: translate(-50%, -2px);
-}/*# sourceMappingURL=style.css.map */
+}
+
+.uniuni-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #333;
+  position: relative;
+}
+
+.uniuni-face {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.uniuni-face::before {
+  content: '・-・';
+  font-size: 40px;
+  font-weight: bold;
+  color: #fff;
+}
+
+/*# sourceMappingURL=style.css.map */
