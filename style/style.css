@@ -154,8 +154,7 @@ body::before {
   top: 0;
   z-index: 100;
   background: rgba(10, 10, 15, 0.95);
-  -webkit-backdrop-filter: blur(8px);
-          backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
   box-shadow: 0 4px 12px rgba(0, 255, 252, 0.15);
 }
 
@@ -166,8 +165,7 @@ body::before {
   background: rgba(16, 16, 32, 0.7);
   border: 1px solid #00fffc;
   box-shadow: 0 0 15px rgba(0, 255, 252, 0.3);
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
   position: relative;
   overflow: hidden;
   display: flex;
@@ -228,8 +226,7 @@ body::before {
   background-color: rgba(16, 16, 32, 0.8);
   border: 1px solid #fc00ff;
   box-shadow: 0 0 10px rgba(252, 0, 255, 0.3);
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
   transition: all 0.3s ease;
   pointer-events: auto;
 }
@@ -296,8 +293,7 @@ body::before {
   transition: all 0.5s;
   box-shadow: -5px 0 20px rgba(252, 0, 255, 0.3);
   border-left: 1px solid #fc00ff;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 
 .list-content::before {
@@ -534,6 +530,13 @@ h1::after, h2::after {
   color: #e6ffff;
   line-height: 1.6;
   font-size: 0.95rem;
+}
+
+.qualification-year {
+  color: #bffcf9;
+  font-size: 0.7em;
+  margin-left: 0.5em;
+  white-space: nowrap; /* ← 折り返し防止 */
 }
 
 /* Projects Grid */
@@ -1461,33 +1464,4 @@ footer {
 .copy-tip.show {
   opacity: 1;
   transform: translate(-50%, -2px);
-}
-
-.uniuni-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background: #333;
-  position: relative;
-}
-
-.uniuni-face {
-  position: relative;
-  width: 60px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.uniuni-face::before {
-  content: '・-・';
-  font-size: 40px;
-  font-weight: bold;
-  color: #fff;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

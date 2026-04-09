@@ -556,6 +556,18 @@ h1::after, h2::after {
   line-height: 1.6;
   font-size: 0.95rem;
 }
+// .qualification-header {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+// }
+.qualification-year {
+  color: #bffcf9;
+  font-size: 0.7em;
+  margin-left: 0.5em;
+  white-space: nowrap; /* ← 折り返し防止 */
+}
+
 
 /* Projects Grid */
 .projects-grid {
