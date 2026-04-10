@@ -121,7 +121,15 @@
     border: 1px solid rgba(11, 61, 145, 0.06);
   }
 
-  img { filter: none; }
+  img { 
+  filter: none; 
+  pointer-events: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-touch-callout: none;
+  -moz-user-select: none;
+  user-select: none;
+  }
 }
 
 @keyframes glitch {
@@ -721,6 +729,33 @@ h1::after, h2::after {
   &--2 {
     bottom: 22px;
     right: 34px;
+  }
+}
+
+.uniuni-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #333;
+  position: relative;
+
+  .uniuni-face {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &::before {
+      content: '● _ ●';
+      font-size: 12px;
+      font-weight: bold;
+      color: #fff;
+    }
   }
 }
 
